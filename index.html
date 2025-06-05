@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; URL=https://mettaworldpe.ac/e">
+  <meta http-equiv="refresh" content="0; URL=https://mettaworldpe.ac/e"> <!-- Instant redirect -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Redirecting...</title>
   <meta property="og:title" content="mettaworldpe.ac/e">
@@ -24,9 +24,8 @@
     html, body {
       height: 100%;
       width: 100%;
-      font-family: sans-serif;
       background: #fff;
-      overflow: hidden; /* prevent scrolling */
+      overflow: hidden;
     }
 
     .logo-container {
@@ -34,11 +33,10 @@
       width: 100vw;
       display: flex;
       justify-content: center;
-      align-items: flex-start; /* move image upwards */
-      padding-top: 5vw; /* top padding for spacing */
+      align-items: flex-start;
+      padding-top: 5vw;
       padding-left: 8vw;
       padding-right: 8vw;
-      padding-bottom: 0;
       box-sizing: border-box;
     }
 
@@ -50,30 +48,12 @@
       height: auto;
     }
 
-    /* Desktop image */
     .logo-desktop {
       display: block;
     }
 
-    /* Tablet image and increased padding */
-    @media (max-width: 1024px) {
+    @media (max-width: 480px) {
       .logo-desktop {
-        display: none;
-      }
-      .logo-tablet {
-        display: block;
-      }
-      .logo-container {
-        padding-top: 2vw;
-        padding-left: 13vw;
-        padding-right: 13vw;
-        padding-bottom: 0;
-      }
-    }
-
-    /* Mobile image and even more padding */
-    @media (max-width: 768px) {
-      .logo-tablet {
         display: none;
       }
       .logo-mobile {
@@ -83,24 +63,13 @@
         padding-top: 10vw;
         padding-left: 16vw;
         padding-right: 16vw;
-        padding-bottom: 0;
       }
     }
   </style>
-  <script>
-    // Redirect immediately
-    window.location.href = "https://mettaworldpe.ac/e";
-  </script>
 </head>
 <body>
   <div class="logo-container">
-    <!-- Desktop image -->
     <img class="logo logo-desktop" src="https://mettaworldpe.ac/mettaworldpeace.png" alt="">
-
-    <!-- Tablet image -->
-    <img class="logo logo-tablet" src="https://mettaworldpe.ac/mettaworldpeace_tablet.png" alt="">
-
-    <!-- Mobile image -->
     <img class="logo logo-mobile" src="https://mettaworldpe.ac/mettaworldpeace_mobile.png" alt="">
   </div>
 </body>
