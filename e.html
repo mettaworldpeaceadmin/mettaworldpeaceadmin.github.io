@@ -44,19 +44,28 @@
       height: auto;
     }
 
+    /* Portrait mode: fill more horizontally */
     @media (orientation: portrait) {
       .logo {
-        height: auto;
-        width: 140vw; /* fill horizontal space more */
-        transform: translateX(-20vw); /* shift left to center */
+        width: 140vw;
+        transform: translateX(-20vw);
       }
     }
 
-    @media (orientation: landscape) {
+    /* Landscape on larger screens (tablet/desktop) */
+    @media (orientation: landscape) and (min-width: 768px) {
       .logo {
         width: 80vw;
         max-width: 800px;
-        height: auto;
+        transform: none;
+      }
+    }
+
+    /* Landscape on smaller devices (mobile) */
+    @media (orientation: landscape) and (max-width: 767px) {
+      .logo {
+        width: 70vw;
+        max-width: 600px;
         transform: none;
       }
     }
