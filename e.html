@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>mettaworldpe.ac/e</title>
   <meta property="og:title" content="mettaworldpe.ac/e">
   <meta name="description" content="mettaworldpe.ac/e">
@@ -25,11 +25,12 @@
       width: 100%;
       font-family: sans-serif;
       background: #fff;
+      overflow: hidden;
     }
 
     .logo-container {
       height: 100vh;
-      width: 100%;
+      width: 100vw;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -38,32 +39,25 @@
     }
 
     .logo {
-      width: 60vw;
-      max-width: 300px;
+      width: 100vw;
+      max-width: none;
       height: auto;
     }
 
-    /* Tablets */
-    @media (min-width: 600px) {
+    @media (orientation: portrait) {
       .logo {
-        width: 50vw;
-        max-width: 500px;
+        height: auto;
+        width: 140vw; /* fill horizontal space more */
+        transform: translateX(-20vw); /* shift left to center */
       }
     }
 
-    /* Desktops */
-    @media (min-width: 1024px) {
-      .logo {
-        width: 40vw;
-        max-width: 700px;
-      }
-    }
-
-    /* Small screens (mobiles) */
-    @media (max-width: 599px) {
+    @media (orientation: landscape) {
       .logo {
         width: 80vw;
-        max-width: none;
+        max-width: 800px;
+        height: auto;
+        transform: none;
       }
     }
   </style>
