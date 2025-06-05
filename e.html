@@ -34,8 +34,11 @@
       width: 100vw;
       display: flex;
       justify-content: center;
-      align-items: center;
-      padding: 8vw; /* default desktop padding */
+      align-items: flex-start; /* align image to top */
+      padding-top: 5vw; /* some top spacing */
+      padding-left: 8vw;
+      padding-right: 8vw;
+      padding-bottom: 0;
       box-sizing: border-box;
     }
 
@@ -61,7 +64,10 @@
         display: block;
       }
       .logo-container {
-        padding: 11vw; /* increased tablet padding */
+        padding-top: 7vw;
+        padding-left: 11vw;
+        padding-right: 11vw;
+        padding-bottom: 0;
       }
     }
 
@@ -74,7 +80,10 @@
         display: block;
       }
       .logo-container {
-        padding: 16vw; /* increased mobile padding */
+        padding-top: 10vw;
+        padding-left: 16vw;
+        padding-right: 16vw;
+        padding-bottom: 0;
       }
     }
   </style>
