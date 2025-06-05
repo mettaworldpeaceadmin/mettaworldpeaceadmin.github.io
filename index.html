@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="refresh" content="0; URL=https://mettaworldpe.ac/e">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Redirecting...</title>
   <meta property="og:title" content="mettaworldpe.ac/e">
   <meta name="description" content="mettaworldpe.ac/e">
@@ -26,7 +26,7 @@
       width: 100%;
       font-family: sans-serif;
       background: #fff;
-      overflow: hidden;
+      overflow: hidden; /* prevent scrolling */
     }
 
     .logo-container {
@@ -35,46 +35,56 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow-x: auto; /* Allow horizontal scroll in portrait */
     }
 
     .logo {
-      width: 100vw;
-      max-width: none;
+      display: none;
+      max-width: 100%;
+      max-height: 90vh;
+      width: auto;
       height: auto;
     }
 
-    /* Portrait mode: show wider image with horizontal scroll */
-    @media (orientation: portrait) {
-      .logo {
-        width: 140vw;
-        transform: none;
+    /* Desktop image */
+    .logo-desktop {
+      display: block;
+    }
+
+    /* Tablet image */
+    @media (max-width: 1024px) {
+      .logo-desktop {
+        display: none;
+      }
+      .logo-tablet {
+        display: block;
       }
     }
 
-    /* Landscape on large screens */
-    @media (orientation: landscape) and (min-width: 768px) {
-      .logo {
-        width: 80vw;
-        max-width: 800px;
+    /* Mobile image */
+    @media (max-width: 768px) {
+      .logo-tablet {
+        display: none;
       }
-    }
-
-    /* Landscape on mobile */
-    @media (orientation: landscape) and (max-width: 767px) {
-      .logo {
-        width: 70vw;
-        max-width: 600px;
+      .logo-mobile {
+        display: block;
       }
     }
   </style>
   <script>
+    // Redirect immediately
     window.location.href = "https://mettaworldpe.ac/e";
   </script>
 </head>
 <body>
   <div class="logo-container">
-    <img class="logo" src="https://mettaworldpe.ac/mettaworldpeace.png" alt="">
+    <!-- Desktop image -->
+    <img class="logo logo-desktop" src="https://mettaworldpe.ac/mettaworldpeace.png" alt="Logo Desktop">
+
+    <!-- Tablet image -->
+    <img class="logo logo-tablet" src="https://mettaworldpe.ac/mettaworldpeace_tablet.png" alt="Logo Tablet">
+
+    <!-- Mobile image -->
+    <img class="logo logo-mobile" src="https://mettaworldpe.ac/mettaworldpeace_mobile.png" alt="Logo Mobile">
   </div>
 </body>
 </html>
