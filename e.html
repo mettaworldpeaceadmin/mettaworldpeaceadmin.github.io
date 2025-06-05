@@ -35,7 +35,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 6vw;
+      padding: 8vw; /* default desktop padding */
       box-sizing: border-box;
     }
 
@@ -52,7 +52,7 @@
       display: block;
     }
 
-    /* Tablet image */
+    /* Tablet image and increased padding */
     @media (max-width: 1024px) {
       .logo-desktop {
         display: none;
@@ -60,15 +60,21 @@
       .logo-tablet {
         display: block;
       }
+      .logo-container {
+        padding: 11vw; /* increased tablet padding */
+      }
     }
 
-    /* Mobile image */
+    /* Mobile image and even more padding */
     @media (max-width: 768px) {
       .logo-tablet {
         display: none;
       }
       .logo-mobile {
         display: block;
+      }
+      .logo-container {
+        padding: 16vw; /* increased mobile padding */
       }
     }
   </style>
