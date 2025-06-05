@@ -20,7 +20,7 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
       width: 100%;
       font-family: sans-serif;
@@ -34,8 +34,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
-      top: -10vh;
+      overflow-x: auto;
     }
 
     .logo {
@@ -44,11 +43,10 @@
       height: auto;
     }
 
-    /* Portrait mode: fill more horizontally */
+    /* Portrait mode: fill more horizontally, scroll if needed */
     @media (orientation: portrait) {
       .logo {
         width: 140vw;
-        transform: translateX(-20vw);
       }
     }
 
@@ -57,7 +55,6 @@
       .logo {
         width: 80vw;
         max-width: 800px;
-        transform: none;
       }
     }
 
@@ -66,7 +63,6 @@
       .logo {
         width: 70vw;
         max-width: 600px;
-        transform: none;
       }
     }
   </style>

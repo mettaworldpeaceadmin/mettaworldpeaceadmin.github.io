@@ -21,7 +21,7 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
       width: 100%;
       font-family: sans-serif;
@@ -35,8 +35,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
-      top: -10vh;
+      overflow-x: auto; /* Allow horizontal scroll in portrait */
     }
 
     .logo {
@@ -45,11 +44,11 @@
       height: auto;
     }
 
-    /* Portrait mode: wider image to simulate horizontal feel */
+    /* Portrait mode: show wider image with horizontal scroll */
     @media (orientation: portrait) {
       .logo {
         width: 140vw;
-        transform: translateX(-20vw);
+        transform: none;
       }
     }
 
@@ -58,21 +57,19 @@
       .logo {
         width: 80vw;
         max-width: 800px;
-        transform: none;
       }
     }
 
-    /* Landscape on mobile (smaller than 768px) — slightly smaller */
+    /* Landscape on mobile */
     @media (orientation: landscape) and (max-width: 767px) {
       .logo {
         width: 70vw;
         max-width: 600px;
-        transform: none;
       }
     }
   </style>
   <script>
-    window.location.href = "https://mettaworldpe.ac/e"
+    window.location.href = "https://mettaworldpe.ac/e";
   </script>
 </head>
 <body>
