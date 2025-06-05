@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; URL=https://mettaworldpe.ac/e"> <!-- Instant redirect -->
+  <meta http-equiv="refresh" content="0; URL=https://mettaworldpe.ac/e">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Redirecting...</title>
   <meta property="og:title" content="mettaworldpe.ac/e">
@@ -26,6 +26,7 @@
       width: 100%;
       background: #fff;
       overflow: hidden;
+      font-family: sans-serif;
     }
 
     .logo-container {
@@ -33,11 +34,10 @@
       width: 100vw;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      padding-top: 5vw;
-      padding-left: 8vw;
-      padding-right: 8vw;
+      align-items: center;
+      padding: 0 8vw;
       box-sizing: border-box;
+      transform: translateY(-5vh); /* slight upward shift on desktop/tablet */
     }
 
     .logo {
@@ -52,17 +52,22 @@
       display: block;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
       .logo-desktop {
         display: none;
       }
+
       .logo-mobile {
         display: block;
       }
+
       .logo-container {
+        transform: none;
+        align-items: flex-start;
         padding-top: 10vw;
         padding-left: 16vw;
         padding-right: 16vw;
+        padding-bottom: 0;
       }
     }
   </style>

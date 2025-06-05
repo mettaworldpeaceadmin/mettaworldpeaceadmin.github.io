@@ -20,8 +20,7 @@
       box-sizing: border-box;
     }
 
-    html,
-    body {
+    html, body {
       height: 100%;
       width: 100%;
       font-family: sans-serif;
@@ -34,12 +33,10 @@
       width: 100vw;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      padding-top: 5vw;
-      padding-left: 8vw;
-      padding-right: 8vw;
-      padding-bottom: 0;
+      align-items: center;
+      padding: 0 8vw;
       box-sizing: border-box;
+      transform: translateY(-5vh); /* slight upward shift for desktop/tablet */
     }
 
     .logo {
@@ -54,7 +51,6 @@
       display: block;
     }
 
-    /* Mobile only: 480px and below */
     @media (max-width: 480px) {
       .logo-desktop {
         display: none;
@@ -63,9 +59,12 @@
         display: block;
       }
       .logo-container {
+        transform: none;
+        align-items: flex-start;
         padding-top: 10vw;
         padding-left: 16vw;
         padding-right: 16vw;
+        padding-bottom: 0;
       }
     }
   </style>
